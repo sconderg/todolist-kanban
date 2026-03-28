@@ -44,7 +44,7 @@ export default function TaskCard({ task, index, columnColor }: TaskCardProps) {
                 cursor: isDragging ? 'grabbing' : 'pointer',
 
                 ...(isDropTarget && !isDragging && {
-                    borderTop: '3px solid #3b82f6',
+                    borderTop: '3px solid #0464ff82',
                     mt: '-2px',
                 }),
             }}

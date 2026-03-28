@@ -24,7 +24,43 @@ export const useCreateTask = () => {
 
     return useMutation({
         mutationFn: (input: CreateTaskInput) => createTask(input),
-        onSuccess: () => {
+        onMutate: async (newInput) => {
+            await queryClient.cancelQueries({ queryKey: taskKeys.all });
+            const previousQueries = queryClient.getQueriesData<any>({ queryKey: taskKeys.all });
+
+            const optimisticTask: Task = {
+                id: `temp-${Date.now()}`,
+                title: newInput.title,
+                description: newInput.description || '',
+                column: newInput.column,
+                order: newInput.order || 0,
+            };
+
+            previousQueries.forEach(([queryKey, data]) => {
+                if (!data?.pages || queryKey[1] !== newInput.column) return;
+                
+                const newPages = data.pages.map((page: any, index: number) => {
+                    if (index === 0) {
+                        const tasksArray = page.data || page.tasks || [];
+                        const newTasksArray = [...tasksArray, optimisticTask].sort((a: Task, b: Task) => a.order - b.order);
+                        return { ...page, data: newTasksArray, total: (page.total || 0) + 1 };
+                    }
+                    return page;
+                });
+                
+                queryClient.setQueryData(queryKey, { ...data, pages: newPages });
+            });
+
+            return { previousQueries };
+        },
+        onError: (_err, _variables, context) => {
+            if (context?.previousQueries) {
+                context.previousQueries.forEach(([queryKey, data]) => {
+                    queryClient.setQueryData(queryKey, data);
+                });
+            }
+        },
+        onSettled: () => {
             queryClient.invalidateQueries({ queryKey: taskKeys.all });
         },
     });
