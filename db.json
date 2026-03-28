@@ -1,0 +1,248 @@
+{
+  "columns": [
+    {
+      "id": "backlog",
+      "label": "Backlog",
+      "color": "#94a3b8"
+    },
+    {
+      "id": "in_progress",
+      "label": "In Progress",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "review",
+      "label": "In Review",
+      "color": "#ef4444"
+    },
+    {
+      "id": "done",
+      "label": "Done",
+      "color": "#22c55e"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "API Integration",
+      "description": "Connect frontend to REST API endpoints",
+      "column": "done",
+      "priority": "high",
+      "order": 1000
+    },
+    {
+      "id": "2",
+      "title": "Unit Tests",
+      "description": "Write tests for utility functions and hooks",
+      "column": "in_progress",
+      "priority": "high",
+      "order": 5393.06640625
+    },
+    {
+      "id": "3",
+      "title": "Performance Audit",
+      "description": "Lighthouse scores and bundle analysis",
+      "column": "in_progress",
+      "priority": "high",
+      "order": 1400.390625
+    },
+    {
+      "id": "4",
+      "title": "Notification System",
+      "description": "Toast notifications and in-app alerts",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 2014.6484375
+    },
+    {
+      "id": "5",
+      "title": "User Settings Page",
+      "description": "Profile editing, preferences, and account management",
+      "column": "in_progress",
+      "priority": "high",
+      "order": 85.9375
+    },
+    {
+      "id": "6",
+      "title": "Error Boundary",
+      "description": "Add global error boundaries with fallback UI",
+      "column": "backlog",
+      "priority": "high",
+      "order": 5000
+    },
+    {
+      "id": "7",
+      "title": "i18n Support",
+      "description": "Add internationalization and language switching",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 282.470703125
+    },
+    {
+      "id": "8",
+      "title": "Accessibility Audit",
+      "description": "Fix ARIA labels and keyboard navigation",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 786.1328125
+    },
+    {
+      "id": "9",
+      "title": "Authentication Flow",
+      "description": "Implement login, signup, and password reset screens",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 5239.501953125
+    },
+    {
+      "id": "10",
+      "title": "File Upload Component",
+      "description": "Drag and drop file upload with preview",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 380.7373046875
+    },
+    {
+      "id": "11",
+      "title": "Data Table",
+      "description": "Sortable and filterable data table component",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 184.2041015625
+    },
+    {
+      "id": "12",
+      "title": "Charts Dashboard",
+      "description": "Revenue and analytics charts using recharts",
+      "column": "done",
+      "priority": "medium",
+      "order": 1500
+    },
+    {
+      "id": "13",
+      "title": "Role Based Access",
+      "description": "Admin, editor, and viewer permission levels",
+      "column": "backlog",
+      "priority": "low",
+      "order": 250
+    },
+    {
+      "id": "14",
+      "title": "Email Templates",
+      "description": "Transactional email designs for auth flows",
+      "column": "backlog",
+      "priority": "low",
+      "order": 6000
+    },
+    {
+      "id": "15",
+      "title": "Dark Mode Support",
+      "description": "Add theme toggle and CSS variable switching",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 479.00390625
+    },
+    {
+      "id": "16",
+      "title": "Dashboard Layout",
+      "description": "Build responsive sidebar and main content area",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 6314.453125
+    },
+    {
+      "id": "17",
+      "title": "Search Functionality",
+      "description": "Global search with debounce and highlights",
+      "column": "backlog",
+      "priority": "low",
+      "order": 8000
+    },
+    {
+      "id": "18",
+      "title": "Onboarding Flow",
+      "description": "Step by step onboarding wizard for new users",
+      "column": "backlog",
+      "priority": "low",
+      "order": 9000
+    },
+    {
+      "id": "19",
+      "title": "Mobile Responsiveness",
+      "description": "Fix layout breakpoints for small screens",
+      "column": "in_progress",
+      "priority": "high",
+      "order": 2628.90625
+    },
+    {
+      "id": "20",
+      "title": "Design System Tokens",
+      "description": "Set up color palette, typography, and spacing scales",
+      "column": "done",
+      "priority": "high",
+      "order": 500
+    },
+    {
+      "id": "21",
+      "title": "Project Scaffolding",
+      "description": "Next.js setup with TypeScript and ESLint",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 1707.51953125
+    },
+    {
+      "id": "22",
+      "title": "CI/CD Pipeline",
+      "description": "GitHub Actions for lint, test, and deploy",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 1553.955078125
+    },
+    {
+      "id": "23",
+      "title": "Database Schema",
+      "description": "Design tables and relationships for core entities",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 5700.1953125
+    },
+    {
+      "id": "24",
+      "title": "Component Library",
+      "description": "Set up Storybook with core UI components",
+      "column": "in_progress",
+      "priority": "medium",
+      "order": 7542.96875
+    },
+    {
+      "id": "25",
+      "title": "SEO Metadata",
+      "description": "Add Open Graph tags and sitemap generation",
+      "column": "in_progress",
+      "priority": "low",
+      "order": 10000
+    },
+    {
+      "title": "wow",
+      "column": "done",
+      "order": 375,
+      "description": "",
+      "id": "w4wbyVw"
+    },
+    {
+      "title": "yaay",
+      "column": "review",
+      "order": 54.6875,
+      "description": "",
+      "id": "TRw_1Ke"
+    },
+    {
+      "title": "lolol",
+      "column": "review",
+      "order": 15.625,
+      "description": "hhh",
+      "id": "4-QX_Yr",
+      "priority": "low"
+    }
+  ]
+}
